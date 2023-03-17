@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: 0;
 }
+
+html{
+    font-family: sans-serif;
+    font-weight: 200;
+}
 .d-flex{
     display: flex;
     justify-content: center;
@@ -25,11 +30,16 @@
     
 }
 
+
+#username{
+    align-self: center;
+}
 #user-profile{
     width: 40%;
-    justify-content: left;
     border-right-style: groove;
     padding: 10px;
+    align-self: center;
+    justify-content: space-between;
 }
 
 #chat-pic{
@@ -38,6 +48,7 @@
     height: 50px;
     justify-self: left;
     border-radius: 50%;
+    align-self: center;
 }
 #user-pic{
     width: 50px;
@@ -157,10 +168,34 @@
 }
 
 #message-box{
+    display: flex;
     height: calc(10% - 45px);
     background-color: white;
     padding: 20px;
     vertical-align: bottom;
-    justify-self: flex-end;
+    justify-content: space-between ;
+
 }
 
+.icons{
+    font-size: 24px;
+    color: grey;
+    padding: 5px;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.icons i{
+    margin-left: 10px;
+}
+
+#message-box i{
+    align-self: center;
+    width: 10%;
+}
+
+#message-box input{
+    align-self: center;
+    width: 80%;
+}
