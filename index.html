@@ -58,27 +58,14 @@
                 </div>
               </div>
               <div id="contacts">
-                <div class="contatto d-flex">
-                  <img id="chat-pic" src="./img/avatar_2.jpg" alt="" />
+                <div
+                  v-for="(contatto, index) in contacts"
+                  class="contatto d-flex"
+                >
+                  <img id="chat-pic" :src="contacts[index].img" />
                   <div class="contatto-text">
-                    <h2>nome</h2>
-                    <p>ultimo messaggio inviato</p>
-                  </div>
-                  <p class="data-accesso">12.20</p>
-                </div>
-                <div class="contatto d-flex">
-                  <img id="chat-pic" src="./img/avatar_3.jpg" alt="" />
-                  <div class="contatto-text">
-                    <h2>nome</h2>
-                    <p>ultimo messaggio inviato</p>
-                  </div>
-                  <p class="data-accesso">12.20</p>
-                </div>
-                <div class="contatto d-flex">
-                  <img id="chat-pic" src="./img/avatar_4.jpg" alt="" />
-                  <div class="contatto-text">
-                    <h2>nome</h2>
-                    <p>ultimo messaggio inviato</p>
+                    <h2 v-text="contacts[index].nome"></h2>
+                    <p v-text="contacts[index].status"></p>
                   </div>
                   <p class="data-accesso">12.20</p>
                 </div>
