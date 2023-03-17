@@ -25,7 +25,7 @@ html{
 
 #header{
     width: 70vw;
-    background-color: white;
+    background-color: whitesmoke;
     flex-direction: row;
     
 }
@@ -96,8 +96,20 @@ html{
     
 }
 
+h3{
+    font-weight: 200;
+}
+ h2{
+    font-weight: 100;
+ }
+
+
+ .data-accesso{
+    align-self: flex-start;
+ }
+
 .notification-box h2{
-    font-weight: 300;
+    font-weight: 200;
     font-size: 16px;
 }
 
@@ -133,6 +145,7 @@ html{
 }
 .contatto-text{
     margin-left: 10px;
+    width: 80%;
 }
 
 
@@ -190,12 +203,21 @@ html{
     margin-left: 10px;
 }
 
+#message-box{
+    background-color: whitesmoke;
+}
+
 #message-box i{
     align-self: center;
     width: 10%;
+    text-align: center;
 }
 
 #message-box input{
+    height: 30px;
+    padding: 10px;
+    border-style: none;
+    border-radius: 5px;
     align-self: center;
     width: 80%;
 }
