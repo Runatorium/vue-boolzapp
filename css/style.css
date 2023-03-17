@@ -20,14 +20,13 @@
 
 #header{
     width: 70vw;
-    background-color: rgb(139, 136, 136);
-    border-style: dashed; /*debug*/
+    background-color: white;
     flex-direction: row;
     
 }
 
 #user-profile{
-    width: 25%;
+    width: 40%;
     justify-content: left;
     border-right-style: groove;
 }
@@ -54,15 +53,12 @@
 }
 
 .contact-list{
-    background-color: rgb(139, 136, 136);
-    border-style: dashed; /*debug*/
     width: 35%;
     height: 87vh
 }
 
 #chat{
-    background-color: rgb(139, 136, 136);
-    border-style: dashed; /*debug*/
+    background-image: url(../img/mine.jpg);    
     width: 65%;
     height: 87vh
 }
@@ -70,7 +66,7 @@
 .notification-box{
     height: 80px;
     width: 100%;
-    background-color: rgb(2, 127, 200);
+    background-color: rgb(57, 149, 235);
 }
 
 .researchtab{
@@ -85,4 +81,50 @@
 #search-button{
     width: 25%;
     padding: 5px;
+}
+
+#contacts{
+    width: 100%;
+    height: calc(100% - 110px);
+    background-color: white
+}
+
+.contatto{
+    padding: 5px;
+    padding-top: 10px;
+    justify-content: left;
+    border-bottom: solid 1px;
+}
+.contatto-text{
+    margin-left: 10px;
+}
+
+
+.messaggio-uscita{
+    padding: 20px;
+    background-color: greenyellow;
+    display: inline-block;
+    border-radius: 20px;
+    width: fit-content;
+    align-self: flex-end;
+    margin-top: 10px;
+    margin-right: 5px;
+
+}
+
+
+.messaggio-entrata{
+    padding: 20px;
+    background-color: white;
+    display: inline;
+    border-radius: 20px;
+    width: fit-content;
+    justify-self: left;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.chatbox{
+    flex-direction: column;
 }
