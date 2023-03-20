@@ -6,6 +6,7 @@ createApp(
             return {
                 activeUser: [],
                 newmsg: "",
+                timer: 1000,
                 contacts: [
                     {
                         nome: "michele",
@@ -71,6 +72,7 @@ createApp(
             } 
             
         },
+        
         methods:{
            setActiveUser(index){
             this.activeUser = this.contacts[index]
@@ -83,8 +85,21 @@ createApp(
                 }
                 console.log(this.activeUser.messaggi);
                 this.activeUser.messaggi.push(newmsg);
+                setTimeout(this.myfunction, 1000);
                 newmsg = "";
             },
+            myfunction(){
+                let nuovomsg = {
+                    text: "ok",
+                    tipo: "received",
+                }
+                console.log(this.activeUser.messaggi);
+                this.activeUser.messaggi.push(nuovomsg);
+            },
+
+            
+            
         }
+        
     }
 ).mount('#app')
