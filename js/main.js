@@ -6,6 +6,8 @@ createApp(
             return {
                 activeUser: [],
                 newmsg: "",
+                ricercaUtente:"",
+                utentiTrovati: [],
                 timer: 1000,
                 contacts: [
                     {
@@ -77,7 +79,11 @@ createApp(
            setActiveUser(index){
             this.activeUser = this.contacts[index]
             },
-
+            /*
+            findUser(){
+                this.utentiTrovati = this.contacts.filter(contacts => contacts.name == this.ricercaUtente)
+                console.log(this.utentiTrovati);
+            },*/
             addmsg(){
                 let newmsg = {
                     text: this.newmsg,
