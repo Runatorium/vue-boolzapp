@@ -62,7 +62,7 @@ createApp(
                                 tipo: "sent",
                             },
                             {
-                                text:"",
+                                text:"vex",
                                 tipo: "received",
                             }
                         ],
@@ -72,17 +72,18 @@ createApp(
             
         },
         methods:{
-           setActiveUser(user){
-            this.activeUser = this.contacts.find(contacts => contacts.nome === user)
+           setActiveUser(index){
+            this.activeUser = this.contacts[index]
             },
 
             addmsg(){
                 let newmsg = {
-                    text: this.newtask,
-                    tipo: "received",
+                    text: this.newmsg,
+                    tipo: "sent",
                 }
-                /* this.contacts.messaggi.push(newmsg);
-                newmsg = ""; */
+                console.log(this.activeUser.messaggi);
+                this.activeUser.messaggi.push(newmsg);
+                newmsg = "";
             },
         }
     }
