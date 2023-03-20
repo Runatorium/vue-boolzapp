@@ -155,7 +155,7 @@ h3{
 }
 
 
-.messaggio-uscita{
+.sent{
     padding: 20px;
     background-color: greenyellow;
     display: inline-block;
@@ -168,7 +168,7 @@ h3{
 }
 
 
-.messaggio-entrata{
+.received{
     padding: 20px;
     background-color: white;
     display: inline;

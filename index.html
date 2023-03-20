@@ -78,7 +78,7 @@
                 <h3
                   v-for="(messaggio) in activeUser.messaggi"
                   v-text="messaggio.text"
-                  class="messaggio-uscita"
+                  :class="messaggio.tipo"
                 ></h3>
               </div>
               <div id="message-box">
