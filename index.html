@@ -58,26 +58,24 @@
                 </div>
               </div>
               <div id="contacts">
-                <div
-                  v-for="(contatto, index) in contacts"
-                  class="contatto d-flex"
-                >
-                  <img id="chat-pic" :src="contacts[index].img" />
+                <div v-for="(contatto) in contacts" class="contatto d-flex">
+                  <img id="chat-pic" :src="contatto.img" />
                   <div class="contatto-text">
-                    <h2 v-text="contacts[index].nome"></h2>
-                    <p v-text="contacts[index].status"></p>
+                    <h2 v-text="contatto.nome"></h2>
+                    <p
+                      v-text="contatto.messaggi[contatto.messaggi.length - 1].text"
+                    ></p>
                   </div>
                   <p class="data-accesso">12.20</p>
                 </div>
               </div>
             </div>
             <div id="chat">
-              <div class="chatbox d-flex">
-                <h3 class="messaggio-uscita">ciao come stai</h3>
-                <h3 class="messaggio-uscita">bene tu?</h3>
-                <h3 class="messaggio-entrata">ahaha bene</h3>
-                <h3 class="messaggio-entrata">oiaa</h3>
-                <h3 class="messaggio-uscita">ok</h3>
+              <div
+                v-for="(messaggio, index) in contacts"
+                class="chatbox d-flex"
+              >
+                <h3 v-text="contacts[index].text" class="messaggio-uscita"></h3>
               </div>
               <div id="message-box">
                 <i class="fa-solid fa-face-smile"></i>

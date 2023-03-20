@@ -11,11 +11,11 @@ createApp(
                         status: true,
                         messaggi:[
                             {
-                                text:"",
+                                text:"piero",
                                 tipo: "sent",
                             },
                             {
-                                text:"",
+                                text:"prova",
                                 tipo: "received",
                             }
                         ],
@@ -30,7 +30,7 @@ createApp(
                                 tipo: "sent",
                             },
                             {
-                                text:"",
+                                text:"prova2",
                                 tipo: "received",
                             }
                         ],
@@ -45,7 +45,7 @@ createApp(
                                 tipo: "sent",
                             },
                             {
-                                text:"",
+                                text:"prova 2",
                                 tipo: "received",
                             }
                         ],
@@ -65,12 +65,12 @@ createApp(
                             }
                         ],
                     }
-                ]
+                ],
             } 
             
         },
         methods:{
-           
+
         }
     }
 ).mount('#app')
