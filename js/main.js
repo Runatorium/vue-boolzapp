@@ -4,6 +4,7 @@ createApp(
     {
         data() {
             return {
+                activeUser: [],
                 contacts: [
                     {
                         nome: "michele",
@@ -70,7 +71,9 @@ createApp(
             
         },
         methods:{
-
+           setActiveUser(user){
+            this.activeUser = this.contacts.find(contacts => contacts.nome === user)
+            },
         }
     }
 ).mount('#app')

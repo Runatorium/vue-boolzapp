@@ -71,6 +71,7 @@ html{
 }
 
 #chat{
+    position: relative;
     background-image: url(../img/mine.jpg);    
     width: 65%;
     height: 87vh
@@ -182,7 +183,7 @@ h3{
 .chatbox{
     flex-direction: column;
     height: calc(96% - 45px);
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 #message-box{

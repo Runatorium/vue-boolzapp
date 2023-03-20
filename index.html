@@ -60,7 +60,10 @@
               <div id="contacts">
                 <div v-for="(contatto) in contacts" class="contatto d-flex">
                   <img id="chat-pic" :src="contatto.img" />
-                  <div class="contatto-text">
+                  <div
+                    @click="setActiveUser(contatto.nome)"
+                    class="contatto-text"
+                  >
                     <h2 v-text="contatto.nome"></h2>
                     <p
                       v-text="contatto.messaggi[contatto.messaggi.length - 1].text"
@@ -71,11 +74,12 @@
               </div>
             </div>
             <div id="chat">
-              <div
-                v-for="(messaggio, index) in contacts"
-                class="chatbox d-flex"
-              >
-                <h3 v-text="contacts[index].text" class="messaggio-uscita"></h3>
+              <div class="chatbox d-flex">
+                <h3
+                  v-for="(messaggio) in activeUser.messaggi"
+                  v-text="messaggio.text"
+                  class="messaggio-uscita"
+                ></h3>
               </div>
               <div id="message-box">
                 <i class="fa-solid fa-face-smile"></i>
