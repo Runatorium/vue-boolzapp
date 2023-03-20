@@ -5,6 +5,7 @@ createApp(
         data() {
             return {
                 activeUser: [],
+                newmsg: "",
                 contacts: [
                     {
                         nome: "michele",
@@ -73,6 +74,15 @@ createApp(
         methods:{
            setActiveUser(user){
             this.activeUser = this.contacts.find(contacts => contacts.nome === user)
+            },
+
+            addmsg(){
+                let newmsg = {
+                    text: this.newtask,
+                    tipo: "received",
+                }
+                /* this.contacts.messaggi.push(newmsg);
+                newmsg = ""; */
             },
         }
     }

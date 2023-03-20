@@ -83,7 +83,12 @@
               </div>
               <div id="message-box">
                 <i class="fa-solid fa-face-smile"></i>
-                <input type="text" placeholder="scrivi" />
+                <input
+                  type="text"
+                  placeholder="scrivi"
+                  v-model="newmsg"
+                  @keyup.enter="addmsg"
+                />
                 <i class="fa-solid fa-microphone"></i>
               </div>
             </div>
