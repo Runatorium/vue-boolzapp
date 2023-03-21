@@ -92,11 +92,15 @@
             </div>
             <div id="chat">
               <div class="chatbox d-flex">
-                <h3
+                <div
                   v-for="(messaggio) in activeUser.messaggi"
-                  v-text="messaggio.text"
                   :class="messaggio.tipo"
-                ></h3>
+                >
+                  <p>
+                    {{messaggio.text}}
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </p>
+                </div>
               </div>
 
               <div id="message-box">

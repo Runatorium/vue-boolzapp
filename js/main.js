@@ -17,11 +17,11 @@ createApp(
                         status: true,
                         messaggi:[
                             {
-                                text:"piero",
+                                text:"asdasdasdasdasdasdadasdasduna asdasdasdasdasdasdadasdasduna frase abbastanza lunga asdasdasdasdasdasdadasdasduna ",
                                 tipo: "sent",
                             },
                             {
-                                text:"prova",
+                                text:"un'altra frase abbastanza lunga",
                                 tipo: "received",
                             }
                         ],
@@ -32,11 +32,11 @@ createApp(
                         status: true,
                         messaggi:[
                             {
-                                text:"",
+                                text:"ding dong",
                                 tipo: "sent",
                             },
                             {
-                                text:"prova2",
+                                text:"nija anshi i",
                                 tipo: "received",
                             }
                         ],
@@ -47,11 +47,11 @@ createApp(
                         status: true,
                         messaggi:[
                             {
-                                text:"",
+                                text:"asd",
                                 tipo: "sent",
                             },
                             {
-                                text:"prova 2",
+                                text:"holy sigmar",
                                 tipo: "received",
                             }
                         ],
