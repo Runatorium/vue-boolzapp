@@ -5,10 +5,11 @@ createApp(
         data() {
             return {
                 activeUser: [],
+                showContacts: true,
                 newmsg: "",
                 ricercaUtente:"",
-                utentiTrovati: [],
                 timer: 1000,
+                utentiTrovati: [],
                 contacts: [
                     {
                         nome: "michele",
@@ -79,11 +80,15 @@ createApp(
            setActiveUser(index){
             this.activeUser = this.contacts[index]
             },
-            /*
+            
             findUser(){
-                this.utentiTrovati = this.contacts.filter(contacts => contacts.name == this.ricercaUtente)
-                console.log(this.utentiTrovati);
-            },*/
+                if(this.ricercaUtente.lenght === 0){
+                    this.showContacts = true;
+                }else{
+                    this.utentiTrovati = this.contacts.filter(contacts => contacts.nome?.includes(this.ricercaUtente))
+                    this.showContacts = false;
+                }
+            },
             addmsg(){
                 let newmsg = {
                     text: this.newmsg,
@@ -101,6 +106,7 @@ createApp(
                 }
                 console.log(this.activeUser.messaggi);
                 this.activeUser.messaggi.push(nuovomsg);
+                newmsg = "";
             },
 
             

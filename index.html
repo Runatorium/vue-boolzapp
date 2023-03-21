@@ -55,12 +55,27 @@
                     type="text"
                     placeholder="cerca o inizia una nuova chat"
                     v-model="ricercaUtente"
-                    @click="findUser"
+                    @keyup="findUser()"
                   />
                 </div>
               </div>
               <div id="contacts">
                 <div
+                  v-if="!showContacts"
+                  v-for="(contatto, index) in utentiTrovati"
+                  class="contatto d-flex"
+                >
+                  <img id="chat-pic" :src="contatto.img" />
+                  <div @click="setActiveUser(index)" class="contatto-text">
+                    <h2 v-text="contatto.nome"></h2>
+                    <p
+                      v-text="contatto.messaggi[contatto.messaggi.length - 1].text"
+                    ></p>
+                  </div>
+                  <p class="data-accesso">12.20</p>
+                </div>
+                <div
+                  v-if="showContacts"
                   v-for="(contatto, index) in contacts"
                   class="contatto d-flex"
                 >
