@@ -121,6 +121,13 @@ createApp(
                 this.activeUser.messaggi.splice(messaggio, 1);
                 console.log(this.activeUser.messaggi, "messaggi");
             },
-        }     
+
+            async load(){
+                this.activeUser = this.contacts[0];
+            }
+        },
+        mounted(){
+            this.load();
+        }    
     }
 ).mount('#app')
