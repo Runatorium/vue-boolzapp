@@ -105,7 +105,7 @@ createApp(
                 console.log(this.activeUser.messaggi);
                 this.activeUser.messaggi.push(newmsg);
                 setTimeout(this.timingFunction, 1000);
-                newmsg = "";
+                this.newmsg = " ";
             },
             timingFunction(){
                 let nuovomsg = {
