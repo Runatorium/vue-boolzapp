@@ -28,10 +28,17 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </div>
             </div>
-            <div id="current-user-chat" class="d-flex">
+            <div v-if="!showContacts" id="current-user-chat" class="d-flex">
               <img id="chat-pic" :src="activeUser.img" alt="" />
               <div class="testo-chat-utente">
                 <h2 v-text="activeUser.nome"></h2>
+                <p>data di accesso</p>
+              </div>
+            </div>
+            <div v-if="showContacts" id="current-user-chat" class="d-flex">
+              <img id="chat-pic" src="./img/avatar_io.jpg" alt="" />
+              <div class="testo-chat-utente">
+                <h2>Me</h2>
                 <p>data di accesso</p>
               </div>
             </div>
@@ -98,7 +105,10 @@
                 >
                   <p>
                     {{messaggio.text}}
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i
+                      @click="deleteMsg(messaggio)"
+                      class="fa-solid fa-chevron-down"
+                    ></i>
                   </p>
                 </div>
               </div>

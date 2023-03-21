@@ -5,6 +5,7 @@ createApp(
         data() {
             return {
                 activeUser: [],
+                showChatcnt: true,
                 showContacts: true,
                 newmsg: "",
                 ricercaUtente:"",
@@ -77,6 +78,13 @@ createApp(
         },
         
         methods:{
+            showChatdata(){
+                if(this.activeUser.lenght === 0){
+                    this.showChatcnt = true;
+                }else{
+                    this.showChatcnt = false;
+                }
+            },
            setActiveUser(index){
             this.activeUser = this.contacts[index]
             },
@@ -108,10 +116,11 @@ createApp(
                 this.activeUser.messaggi.push(nuovomsg);
                 newmsg = "";
             },
-
-            
-            
-        }
-        
+            /*
+            deleteMsg(messaggio){
+                this.contacts.splice(messaggio, 1);
+            }
+            */
+        }     
     }
 ).mount('#app')

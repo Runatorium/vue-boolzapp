@@ -195,6 +195,9 @@ i.fa-solid.fa-chevron-down {
     font-size: 6px;
 }
 
+
+
+
 .chatbox{
     flex-direction: column;
     height: calc(96% - 45px);
