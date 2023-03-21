@@ -191,11 +191,33 @@ h3{
     font-size: 15px;
 }
 
-i.fa-solid.fa-chevron-down {
+i.fa-solid.fa-chevron-down{
     font-size: 6px;
 }
 
+.tendina:hover .txttendina{
+    display: block;
+    
+}
 
+.txttendina{
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style: none;
+    font-size: 14px;
+    display: none;
+    width: 140px;
+    height: 80px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.txttendina li{
+    padding: 10px 0px;
+
+}
 
 
 .chatbox{

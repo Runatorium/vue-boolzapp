@@ -122,8 +122,6 @@ createApp(
                 console.log(messaggio);
                 console.log(this.activeUser.messaggi, "messaggi");
             },
-            
-        
         }     
     }
 ).mount('#app')

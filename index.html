@@ -13,6 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
   </head>
   <body>
     <div id="app">
@@ -28,17 +29,10 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </div>
             </div>
-            <div v-if="!showContacts" id="current-user-chat" class="d-flex">
+            <div v-if="showContacts" id="current-user-chat" class="d-flex">
               <img id="chat-pic" :src="activeUser.img" alt="" />
               <div class="testo-chat-utente">
                 <h2 v-text="activeUser.nome"></h2>
-                <p>data di accesso</p>
-              </div>
-            </div>
-            <div v-if="showContacts" id="current-user-chat" class="d-flex">
-              <img id="chat-pic" src="./img/avatar_io.jpg" alt="" />
-              <div class="testo-chat-utente">
-                <h2>Me</h2>
                 <p>data di accesso</p>
               </div>
             </div>
@@ -105,10 +99,15 @@
                 >
                   <p>
                     {{messaggio?.text}}
-                    <i
-                      @click="deleteMsg(index)"
-                      class="fa-solid fa-chevron-down"
-                    ></i>
+                    <div class="tendina">
+                      <i
+                        class="fa-solid fa-chevron-down"
+                      ></i>
+                    <ul class="txttendina">
+                      <li>info messaggio</li> 
+                      <li @click="deleteMsg(index)">cancella messaggio</li>   
+                      </ul>
+                  </div>
                   </p>
                 </div>
               </div>
@@ -132,3 +131,5 @@
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
+
+
