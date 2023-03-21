@@ -96,10 +96,10 @@ createApp(
                 }
                 console.log(this.activeUser.messaggi);
                 this.activeUser.messaggi.push(newmsg);
-                setTimeout(this.myfunction, 1000);
+                setTimeout(this.timingFunction, 1000);
                 newmsg = "";
             },
-            myfunction(){
+            timingFunction(){
                 let nuovomsg = {
                     text: "ok",
                     tipo: "received",
