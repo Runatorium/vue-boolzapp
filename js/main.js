@@ -119,7 +119,6 @@ createApp(
             
             deleteMsg(messaggio){
                 this.activeUser.messaggi.splice(messaggio, 1);
-                console.log(messaggio);
                 console.log(this.activeUser.messaggi, "messaggi");
             },
         }     

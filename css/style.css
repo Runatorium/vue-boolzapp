@@ -13,7 +13,7 @@ html{
     justify-content: center;
 }
 #maincontainer{
-    background-color: rgb(34, 108, 34);
+    background-color: rgb(147, 180, 147);
     height: 100vh;
 }
 
@@ -40,6 +40,7 @@ html{
     padding: 10px;
     align-self: center;
     justify-content: space-between;
+    margin-right: 10px;
 }
 
 #chat-pic{

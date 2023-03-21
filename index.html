@@ -29,13 +29,13 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </div>
             </div>
-            <div v-if="showContacts" id="current-user-chat" class="d-flex">
+            <div v-if="activeUser" id="current-user-chat" class="d-flex">
               <img id="chat-pic" :src="activeUser.img" alt="" />
               <div class="testo-chat-utente">
                 <h2 v-text="activeUser.nome"></h2>
                 <p>data di accesso</p>
               </div>
-            </div>
+            </div>  
           </div>
           <div class="mainbody d-flex">
             <div class="contact-list">
