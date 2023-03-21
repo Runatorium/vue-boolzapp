@@ -4,7 +4,7 @@ createApp(
     {
         data() {
             return {
-                activeUser: [],
+                activeUser: {},
                 showChatcnt: true,
                 showContacts: true,
                 newmsg: "",
@@ -116,11 +116,14 @@ createApp(
                 this.activeUser.messaggi.push(nuovomsg);
                 newmsg = "";
             },
-            /*
+            
             deleteMsg(messaggio){
-                this.contacts.splice(messaggio, 1);
-            }
-            */
+                this.activeUser.messaggi.splice(messaggio, 1);
+                console.log(messaggio);
+                console.log(this.activeUser.messaggi, "messaggi");
+            },
+            
+        
         }     
     }
 ).mount('#app')

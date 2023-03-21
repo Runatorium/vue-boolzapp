@@ -76,7 +76,7 @@
                   <div @click="setActiveUser(index)" class="contatto-text">
                     <h2 v-text="contatto.nome"></h2>
                     <p
-                      v-text="contatto.messaggi[contatto.messaggi.length - 1].text"
+                      v-text="contatto.messaggi[contatto.messaggi.length - 1]?.text"
                     ></p>
                   </div>
                   <p class="data-accesso">12.20</p>
@@ -90,7 +90,7 @@
                   <div @click="setActiveUser(index)" class="contatto-text">
                     <h2 v-text="contatto.nome"></h2>
                     <p
-                      v-text="contatto.messaggi[contatto.messaggi.length - 1].text"
+                      v-text="contatto.messaggi[contatto.messaggi.length - 1]?.text"
                     ></p>
                   </div>
                   <p class="data-accesso">12.20</p>
@@ -100,13 +100,13 @@
             <div id="chat">
               <div class="chatbox d-flex">
                 <div
-                  v-for="(messaggio) in activeUser.messaggi"
+                  v-for="(messaggio, index) in activeUser.messaggi"
                   :class="messaggio.tipo"
                 >
                   <p>
-                    {{messaggio.text}}
+                    {{messaggio?.text}}
                     <i
-                      @click="deleteMsg(messaggio)"
+                      @click="deleteMsg(index)"
                       class="fa-solid fa-chevron-down"
                     ></i>
                   </p>
